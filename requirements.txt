@@ -1,6 +1,10 @@
-pandas
+# Base
 numpy
-jupyter
+pandas
 matplotlib
 seaborn
+
+# Jupyter Notebook
+jupyter
+Markdown
 ipykernel

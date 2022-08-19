@@ -1,0 +1,6 @@
+# TensorFlow
+tensorflow-macos==2.9.1
+tensorflow-metal==0.5.1
+
+# Magenta
+magenta==2.1.4
