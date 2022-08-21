@@ -1,0 +1,32 @@
+{
+    "hierdec-drums_4bar_small": {
+        "model": {
+            "encoder": ["lstm_models.BidirectionalLstmEncoder()"],
+            "decoder": ["lstm_models.HierarchicalLstmDecoder(",
+                        "lstm_models.CategoricalLstmDecoder(),",
+                        "level_lengths=[16, 4],",
+                        "disable_autoregression=True)"]
+        },
+        "hparams": {
+            "batch_size": 512,
+            "max_seq_len": 64,
+            "z_size": 256,
+            "enc_rnn_size": [512, 512],
+            "dec_rnn_size": [256, 256],
+            "free_bits": 48,
+            "max_beta": 0.2,
+            "sampling_schedule": "inverse_sigmoid",
+            "sampling_rate": 1000
+        },
+        "note_sequence_augmenter": null,
+        "data_converter": {
+            "data.DrumsConverter": {
+                "max_bars": 100,
+                "slice_bars": 4,
+                "steps_per_quarter": 4,
+                "roll_input": true
+            }
+        },
+        "train_examples_path": "data/midi.tfrecord"
+    }
+}
