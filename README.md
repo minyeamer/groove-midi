@@ -28,7 +28,7 @@ python3 run.py \
 ### Sample
 
 ```bash
-!python3 run.py \
+python3 run.py \
   --config=hierdec-drums_4bar_small \
   --config_file=data/config.json \
   --checkpoint_file=saved/checkpoints/drums_4bar/train/model.ckpt-10 \
